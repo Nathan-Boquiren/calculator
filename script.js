@@ -52,7 +52,11 @@ equalBtn.addEventListener("click", () => {
     result = Number(result.toPrecision(15));
   }
 
-  display.innerHTML = result;
+  if (result === Infinity) {
+    display.innerHTML = "YOU CAN'T DIVIDE BY 0!!";
+  } else {
+    display.innerHTML = result;
+  }
   calculationArr.length = 0;
   calculationArr.push(result);
 });
